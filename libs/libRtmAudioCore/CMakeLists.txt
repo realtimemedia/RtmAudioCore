@@ -16,7 +16,8 @@ project(RtmAudioCore)
 # Define sources
 #############################################################
 set(RtmAudioCore_SRCS
-    src/librtmaudiocore_global.h
+    src/core/rtmaudiocore_export.h
+    src/core/rtmaudiocore_global.h
 )
 
 ##########################################################
@@ -31,6 +32,7 @@ add_library(Rtm::AudioCore ALIAS RtmAudioCore)
 target_link_libraries(RtmAudioCore
     PUBLIC
         Qt5::Core
+        Rtm::Core
 )
 
 ##########################################################
